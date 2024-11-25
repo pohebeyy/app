@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:keepScreenOn="true"
+    tools:context="com.example.app.aractivity.ArActivity">
+
+    <SurfaceView
+        android:id="@+id/surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+
+    <FrameLayout
+        android:id="@+id/hand_motion_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:visibility="gone">
+
+        <com.example.app.arcore.HandMotionView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:foregroundGravity="center"
+            android:scaleType="center"
+            android:src="@drawable/sceneform_hand_phone" />
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/fix_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Зафиксировать"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="16dp" />
+
+
+    <Button
+        android:id="@+id/model_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginLeft="-130dp"
+        android:layout_marginBottom="70dp"
+        android:text="модель2" />
+
+
+</FrameLayout>
